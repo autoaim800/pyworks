@@ -14,7 +14,7 @@ class WelcomePage(GenericPage):
         ret = dict()
         xp = ".//div[@id='cat-nav-list-1']//li/a"
         anchors = self.findElements(xp)
-        print("found %d anchor/s" % (len(anchors)))
+        print("found %d anchor/s at welcome" % (len(anchors)))
         for anchor in anchors:
             href = anchor.get_attribute("href")
             el = anchor.find_element_by_xpath(".//span[@class='item-title']")

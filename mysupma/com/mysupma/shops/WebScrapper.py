@@ -4,8 +4,10 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
+import sqlite3
 
 class WebScrapper:
+
     def __init__(self, url):
         binary = FirefoxBinary('/usr/bin/firefox')
         # profile = webdriver.FirefoxProfile()
@@ -17,4 +19,7 @@ class WebScrapper:
         # self.driver = webdriver.Firefox(profile)
         # firefox_profile
         self.driver = webdriver.Firefox(firefox_binary=binary)
-
+        self.conn = None
+        # dbFp = "mysupma1.db"
+        # if os.path.exists(dbFp):
+        #     self.conn = sqlite3.connect(dbFp)
