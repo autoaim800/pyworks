@@ -22,13 +22,14 @@ class WelcomePage(GenericPage):
             ret[title] = href
         return ret
 
-def waitforInstance(driver):
 
-    xp1 = ".//button[@class and contains(text(), 'Start shopping')]"
-    startButton = waitforXpath(driver, xp1)
-    if startButton is None:
-        print("no found Start shopping button")
-    startButton.click()
+def waitforInstance(driver):
+    # welcome button
+    # xp1 = ".//button[@class and contains(text(), 'Start shopping')]"
+    # startButton = waitforXpath(driver, xp1)
+    # if startButton is None:
+    #     print("no found Start shopping button")
+    # startButton.click()
 
     xp = ".//h2[contains(text(), 'Browse by category')]"
     if waitforXpath(driver, xp):
